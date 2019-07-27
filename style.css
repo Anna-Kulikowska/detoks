@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+}
+*, *:after, *:before{
+    box-sizing: inherit;
+}
+body {
+    background: rgb(236, 214, 236);
+    color:black;
+}
+.grid {
+    display: grid;
+    grid-template-areas: "header header header"
+   "content . menu"
+   "footer footer footer";
+    grid-template-columns: 1fr 100px 200px;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+.grid__item {
+    background: tomato;
+}
+.header {
+    grid-area: header;
+    text-align: center;
+}
+.article {
+    grid-area: content;
+}
+.navigation {
+    grid-area: menu;
+}
+.footer {
+    grid-area: footer;
+}

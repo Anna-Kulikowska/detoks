@@ -1,0 +1,58 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "content .menu" 
+    "footer footer footer";
+    grid-template-columns: 1 fr 1 fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 3%;
+}
+
+.main_header {
+    font-size: 32px;
+    color: green;
+    grid-area: header;
+    text-align: center;
+}
+
+.side_header {
+    text-transform: uppercase;
+    color: brown;
+    text-align: center;
+}
+.article {
+    grid-area: content;
+    text-align: center
+}
+.article2 {
+    grid-area:  .;
+    text-align: center;
+}
+.article3 {
+    grid-area: menu;
+    text-align: center;
+}
+.paragraph {
+    font-size: 20px;
+}
+.footer {
+    grid-area: footer;
+}
+.image {
+    width: 40%;
+    height: 100%;
+    padding: 30px;
+    display: flexbox;
+    justify-content: space-between;
+    align-items: stretch;
+}
