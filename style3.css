@@ -1,0 +1,13 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+}
+
+article {
+    border: 1px dashed black;
+}
+@media (max-width: 440px) {
+    .grid {
+        grid-template-columns: 1fr 2fr 1fr 2fr;
+    }
+}

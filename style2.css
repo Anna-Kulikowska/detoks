@@ -5,14 +5,28 @@ html {
 *, *:after, *:before {
     box-sizing: inherit;
 }
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    font-size: 24px;
+}
+
+.list_item {
+    list-style-type: none;
+    display: inline;
+    font-size: 20px;
+    word-spacing: 5px;
+}
 
 .grid {
     display: grid;
     grid-template-areas: 
-    "header header header"
-    "content .menu" 
-    "footer footer footer";
-    grid-template-columns: 1 fr 1 fr 1fr;
+     "header header header"
+     "content content1 content2"
+     "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     margin: 3%;
@@ -30,24 +44,30 @@ html {
     color: brown;
     text-align: center;
 }
+
 .article {
     grid-area: content;
     text-align: center
 }
+
 .article2 {
-    grid-area:  .;
+    grid-area: content1;
     text-align: center;
 }
+
 .article3 {
-    grid-area: menu;
+    grid-area: content2;
     text-align: center;
 }
+
 .paragraph {
     font-size: 20px;
 }
+
 .footer {
     grid-area: footer;
 }
+
 .image {
     width: 40%;
     height: 100%;
@@ -56,3 +76,51 @@ html {
     justify-content: space-between;
     align-items: stretch;
 }
+
+@media (max-width: 450px) {
+    .main_header {
+        font-size: 16px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "content"
+        "content1"
+        "content2"
+        "footer";
+    }
+    .navigation {
+        display: none;
+        border: 1px dotted blue;
+    }
+    .navigation_list--visible {
+        display: block;
+    }
+    .list_item {
+        display: flexbox;
+        flex-direction: column;
+    }
+}
+@media (min-width: 451px) {
+    .hamburger {
+        display: none;
+}
+.navigation_list {
+    display: flexbox;
+    flex-direction: column;
+}
+}
+
+.paragraph2 {
+    font-size: 20px;
+    text-align: center;
+    color: blueviolet;
+    font-weight: bold;
+}
+.legend {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
